@@ -34,7 +34,7 @@ async def start_command(message:Message):
         db.add_user(full_name=full_name,telegram_id=telegram_id) #foydalanuvchi bazaga qo'shildi
         await message.answer(text="Assalomu alaykum, botimizga hush kelibsiz")
     except:
-        await message.answer(text="Assalomu alaykum")
+        await message.answer(text="Yana bir bor, Assalomu alaykum")
 
 
 @dp.message(IsCheckSubChannels())
@@ -60,7 +60,7 @@ async def help_commands(message:Message):
 #about commands
 @dp.message(Command("about"))
 async def about_commands(message:Message):
-    await message.answer("Sifat 2024")
+    await message.answer("Telefon va kompyuterlar online do'kon. ")
 
 
 @dp.message(Command("admin"),IsBotAdminFilter(ADMINS))
